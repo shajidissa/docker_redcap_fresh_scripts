@@ -1,3 +1,4 @@
+redcap_version_current=7.6.1
 redcap_version=8.5.7
 cd docker_redcap_fresh
 mysql -uroot -proot redcap < redcap/redcap_v${redcap_version}/redcap/redcap_v${redcap_version}/Resources/sql/upgrade_7.06.02.sql

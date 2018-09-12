@@ -1,3 +1,4 @@
+redcap_version_current=7.6.1
 redcap_version=8.5.7
 
 sudo docker stop docker_redcap_fresh_redcap_1
