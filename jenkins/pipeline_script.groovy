@@ -15,7 +15,7 @@ echo 'viewExists= ' + viewExists
 
 if (viewExists == null)
 {
-// create the new view
+    // create the new view
     jenkins.addView(new ListView(viewName))
 
 
@@ -27,7 +27,7 @@ if (viewExists == null)
 
     echo 'view= ' + view
 
-//copy all projects of a view
+    //copy all projects of a view
     for(item in view.getItems())
     {
 
@@ -42,19 +42,11 @@ if (viewExists == null)
         // copy the job, disable and save it
         def job = Hudson.instance.copy(item, newName)
 
-
-
         // get the view
         myView = hudson.model.Hudson.instance.getView(viewName)
 
-// add a job by its name
+        // add a job by its name
         myView.doAddJobToView(newName)
-
-
-
-
-
-
 
         echo 'job= ' + job
 
@@ -72,5 +64,4 @@ if (viewExists == null)
         println(" $item.name copied as $newName")
 
     } // if viewExists
-
 }
