@@ -18,7 +18,6 @@ if (viewExists == null)
     // create the new view
     jenkins.addView(new ListView(viewName))
 
-
     def str_view = "redcap01"
     def str_search = "01"
     def str_replace = params.redcap_server
@@ -30,7 +29,6 @@ if (viewExists == null)
     //copy all projects of a view
     for(item in view.getItems())
     {
-
         echo 'item.getName()= ' + item.getName()
 
         //create the new project name
@@ -62,6 +60,5 @@ if (viewExists == null)
         project.save()
 
         println(" $item.name copied as $newName")
-
     } // if viewExists
 }
